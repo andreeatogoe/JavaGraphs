@@ -1,0 +1,25 @@
+TOGE-DULCU ANDREEA-CRISTINA 322 CB TEMA 2 PA
+
+1. Pentru rezolvarea primei probleme ma folosesc de parcurgeri in adancime 
+(dfs), pornind de la nodul 1, si verificand daca se poate ajunge la unul din 
+cele k noduri carora doresc sa le blochez accesul la nodul 1. Daca se poate 
+ajunge la unul din acestea atunci intrerup parcurgerea si blochez un urmator 
+oras din lista de orase permutate. Apoi incep din nou dfs si tot asa pana cand 
+nu mai pot ajunge la niciunul din cele k noduri. Complexitatea implementarii 
+este: O(m(n^2) - mn + 2n + k).
+
+2. La a doua problema, am incercat prima data implementarea algoritmului 
+Bellman Ford clasic, insa acesta nu avea o complexitate suficient de buna, 
+iar pe jumatate din teste primeam rezultatul TLE. Am ales acest algoritm 
+deoarece graful contine costuri negative si nu contine cicluri negative. 
+ Asadar am optimizat implementarea folosind algoritmul SPFA. In cel mai bun 
+caz, e posibil ca acesta sa aiba chiar complexitatea O(nr muchii).
+ Complexitatea obtinuta este: O(n * m), excluzand citirea datelor, ce are 
+complextatea O(2n + m).
+
+3. A treia problema am ales sa o rezolv cu algoritmul Dijkstra intrucat 
+costurile muchiilor sunt pozitive, si am un nod sursa bine cunoscut.
+ Implementarea este asemenea pseudocodului din laboratorul 9. Pentru coada am 
+ales sa folosesc PriorityQueue pentru toate problemele intrucat acesta are o 
+complexitate foarte buna si este mai comoda din punctul meu de vedere pentru 
+sortarea nodurilor. Complexitatea algoritmului este de: O(n + m * log(n)).
